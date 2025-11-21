@@ -2,7 +2,7 @@
 
 xrdb merge ~/.Xresources 
 xbacklight -set 10 &
-feh --bg-fill ~/Wallpaper/dwm_d77.png &
+feh --bg-fill ~/Wallpaper/background3.png &
 xset r rate 200 50 &
 xcompmgr -c -f -n &
 synclient TapButton1=1 &
