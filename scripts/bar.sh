@@ -11,13 +11,13 @@ interval=0
 cpu() {
   cpu_val=$(grep -o "^[^ ]*" /proc/loadavg)
 
-  printf "^c$black^ ^b$green^ CPU"
+  printf "^c$black^ ^b$green^ "
   printf "^c$white^ ^b$grey^ $cpu_val ^b$black^"
 }
 
 pkg_updates() {
-  #updates=$({ timeout 20 doas xbps-install -un 2>/dev/null || true; } | wc -l) # void
-  updates=$({ timeout 20 checkupdates 2>/dev/null || true; } | wc -l) # arch
+  updates=$({ timeout 20 xbps-install -un 2>/dev/null || true; } | wc -l) # void
+  # updates=$({ timeout 20 checkupdates 2>/dev/null || true; } | wc -l) # arch
   # updates=$({ timeout 20 aptitude search '~U' 2>/dev/null || true; } | wc -l)  # apt (ubuntu, debian etc)
 
   if [ -z "$updates" ]; then
@@ -29,7 +29,7 @@ pkg_updates() {
 
 battery() {
   val="$(cat /sys/class/power_supply/BAT1/capacity)"
-  printf "^c$black^ ^b$red^ BAT"
+  printf "^c$black^ ^b$red^ "
   printf "^c$white^ ^b$grey^ $val ^b$black^"
 
 }
@@ -40,8 +40,8 @@ brightness() {
 }
 
 mem() {
-  printf "^c$red^^b$black^  "
-  printf "^c$red^ $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
+  printf "^c$black^ ^b$darkblue^ "
+  printf "^c$white^ ^b$grey^ $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"
 }
 
 wlan() {
