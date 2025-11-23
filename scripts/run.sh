@@ -6,6 +6,9 @@ feh --bg-fill ~/Wallpaper/background3.png &
 xset r rate 200 50 &
 xcompmgr -c -f -n &
 synclient TapButton1=1 &
+synclient TapButton2=3 &
+redshift -l 41.6:-8.62 &
+udiskie -a &
 
 dash ~/.config/chadwm/scripts/bar.sh &
 while type chadwm >/dev/null; do chadwm && continue || break; done
