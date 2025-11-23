@@ -16,7 +16,7 @@ cpu() {
 }
 
 pkg_updates() {
-  updates=$({ timeout 20 xbps-install -un 2>/dev/null || true; } | wc -l) # void
+  updates=$(timeout 20 xbps-install -un 2>/dev/null | wc -l) # void
   # updates=$({ timeout 20 checkupdates 2>/dev/null || true; } | wc -l) # arch
   # updates=$({ timeout 20 aptitude search '~U' 2>/dev/null || true; } | wc -l)  # apt (ubuntu, debian etc)
 
@@ -28,7 +28,7 @@ pkg_updates() {
 }
 
 battery() {
-  val="$(cat /sys/class/power_supply/BAT1/capacity)"
+  val="$(cat /sys/class/power_supply/BAT0/capacity)"
   printf "^c$black^ ^b$red^ "
   printf "^c$white^ ^b$grey^ $val ^b$black^"
 
