@@ -1,5 +1,5 @@
 [Desktop Entry]
 Name=chadwm
 Comment=dwm made beautiful
-Exec=/home/dani77/.config/chadwm/scripts/./run.sh
+Exec=/opt/chadwm/scripts/./run.sh
 Type=Application
