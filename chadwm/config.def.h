@@ -65,11 +65,11 @@ static const char *colors[][3]      = {
 /* tagging */
 static char *tags[] = {"", "", "", "", ""};
 
-static const char* eww[] = { "eww", "-c", "/home/siduck/.config/chadwm/eww", "open" , "eww", NULL };
+static const char* rofi[] = { "rofi", "-show", "drun", "open" , "rofi", NULL };
 
 static const Launcher launchers[] = {
     /* command     name to display */
-    { eww,         "" },
+    { rofi,         "" },
 };
 
 static const int tagschemes[] = {
@@ -150,7 +150,8 @@ static const Key keys[] = {
     {MODKEY,                            XK_u,       spawn,
         SHCMD("maim --select | xclip -selection clipboard -t image/png")},
 
-    { MODKEY,                           XK_c,       spawn,          SHCMD("rofi -show drun") },
+    { MODKEY,                           XK_a,       spawn,          SHCMD("rofi -show drun") },
+    { MODKEY,                           XK_x,       spawn,          SHCMD("rofi -show power-menu -modi power-menu:rofi-power-menu") },
     { MODKEY,                           XK_Return,  spawn,          SHCMD("st")},
 
     // toggle stuff
