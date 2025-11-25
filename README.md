@@ -22,7 +22,7 @@ alias chadwm='startx /opt/chadwm/scripts/run.sh'
 
 Already created a chadwm.desktop that will be autmatically installed in /usr/share/xsessions
 
-- [wallpaper](https://github.com/siduck/chadwm/blob/screenshots/screenshots/chad.png)
+- [wallpaper](https://github.com/dani-77/chadwm/chad.png)
 
 # Recompile
 
