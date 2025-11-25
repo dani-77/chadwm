@@ -3,36 +3,24 @@
 ## With startx
 
 ```shell
-startx ~/.config/chadwm/scripts/run.sh
+startx /opt/chadwm/scripts/run.sh
 ```
 
 ## With sx
 
 ```shell
-sx sh ~/.config/chadwm/scripts/run.sh
+sx sh /opt/chadwm/scripts/run.sh
 ```
 
 (Make an alias for this :v)
 
 ```shell
-alias chadwm='startx ~/.config/chadwm/scripts/run.sh'
+alias chadwm='startx /opt/chadwm/scripts/run.sh'
 ```
 
 ## With Display Manager
 
-- Create a desktop entry (make sure to change `user` with your user):
-
-```shell
-sudo touch /usr/share/xsessions/chadwm.desktop  
-```
-
-```
-[Desktop Entry]
-Name=chadwm
-Comment=dwm made beautiful 
-Exec=/home/user/.config/chadwm/scripts/./run.sh 
-Type=Application 
-```
+Already created a chadwm.desktop that will be autmatically installed in /usr/share/xsessions
 
 - [wallpaper](https://github.com/siduck/chadwm/blob/screenshots/screenshots/chad.png)
 
@@ -41,7 +29,7 @@ Type=Application
 - You need to recompile dwm after every change you make to its source code.
 
 ```
-cd ~/.config/chadwm/chadwm
+cd /opt/chadwm/chadwm
 rm config.h
 sudo make install
 ```
@@ -51,13 +39,14 @@ sudo make install
 - Bar  : in bar.sh (line 9) and config.def.h (line 35)
 
 
-- It could be a good idea to add these lines to your autostart file, located at ~/.config/chadwm/scripts/run.sh
+- It could be a good idea to add these lines to your autostart file, located at /opt/chadwm/scripts/run.sh
 
 # Credits
 
 - HUGE THANKS to [eProTaLT83](https://www.reddit.com/user/eProTaLT83). I wanted certain features in dwm like tabbar in monocle, tagpreview etc and he implemented my ideas and created patches for me! I can't even count the number of times he has helped me :v
 - @fitrh helped with [colorful tag patch](https://github.com/fitrh/dwm/issues/1)
-
+- And of course Sidhanth Rathod (siduck) for implementing first this embellished DWM.
+  
 # Patches
 
 - [systray](https://gitlab.com/-/snippets/2184056)
