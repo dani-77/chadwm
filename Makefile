@@ -39,12 +39,11 @@ install: all
 	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1
 	cp -p chadwm.desktop /usr/share/xsessions/
 	mkdir -p /opt/chadwm
-	cp -r scripts /opt/chadwm
-
+	cp -r * /opt/chadwm
+	
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/chadwm\
 		${DESTDIR}${MANPREFIX}/man1/dwm.1
 	rm -f /usr/share/xsessions/chadwm.desktop
-	rm -rf /opt/chadwm
 
 .PHONY: all clean dist install uninstall
