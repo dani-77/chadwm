@@ -45,7 +45,7 @@ sudo make install
 
 - HUGE THANKS to [eProTaLT83](https://www.reddit.com/user/eProTaLT83). I wanted certain features in dwm like tabbar in monocle, tagpreview etc and he implemented my ideas and created patches for me! I can't even count the number of times he has helped me :v
 - @fitrh helped with [colorful tag patch](https://github.com/fitrh/dwm/issues/1)
-- And of course Sidhanth Rathod (siduck) for implementing first this embellished DWM.
+- And of course Sidhanth Rathod [siduck](https://github.com/siduck/chadwm) for implementing first this embellished DWM.
   
 # Patches
 
