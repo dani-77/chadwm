@@ -141,8 +141,8 @@ static const Key keys[] = {
     {0,             XF86XK_AudioLowerVolume,    spawn, {.v = downvol}},
 	{0,             XF86XK_AudioMute, spawn,    {.v = mutevol }},
 	{0,             XF86XK_AudioRaiseVolume,    spawn, {.v = upvol}},
-	{0,		XF86XK_MonBrightnessUp,     spawn,	{.v = light_up}},
-	{0,		XF86XK_MonBrightnessDown,   spawn,	{.v = light_down}},
+	{0,				XF86XK_MonBrightnessUp,     spawn,	{.v = light_up}},
+	{0,				XF86XK_MonBrightnessDown,   spawn,	{.v = light_down}},
 
     // screenshot fullscreen and cropped
     {MODKEY|ControlMask,                XK_u,       spawn,
@@ -151,7 +151,6 @@ static const Key keys[] = {
         SHCMD("maim --select | xclip -selection clipboard -t image/png")},
 
     { MODKEY,                           XK_a,       spawn,          SHCMD("rofi -show drun") },
-    { MODKEY,                           XK_r,       spawn,          SHCMD("gmrun") },
     { MODKEY,                           XK_x,       spawn,          SHCMD("rofi -show power-menu -modi power-menu:rofi-power-menu") },
     { MODKEY,                           XK_Return,  spawn,          SHCMD("st")},
 
@@ -236,7 +235,7 @@ static const Key keys[] = {
     { MODKEY,                           XK_q,       killclient,     {0} },
 
     // restart
-    { MODKEY|ShiftMask,                 XK_r,       restart,        {0} },
+    { MODKEY|ShiftMask,                 XK_r,       restart,           {0} },
 
     // hide & restore windows
     { MODKEY,                           XK_e,       hidewin,        {0} },
