@@ -151,6 +151,7 @@ static const Key keys[] = {
         SHCMD("maim --select | xclip -selection clipboard -t image/png")},
 
     { MODKEY,                           XK_a,       spawn,          SHCMD("rofi -show drun") },
+    { MODKEY,                           XK_p,       spawn,          SHCMD("scrot") },
     { MODKEY,                           XK_r,       spawn,          SHCMD("gmrun") },
     { MODKEY,                           XK_x,       spawn,          SHCMD("rofi -show power-menu -modi power-menu:rofi-power-menu") },
     { MODKEY,                           XK_Return,  spawn,          SHCMD("st")},
