@@ -35,8 +35,9 @@ weather() {
 
 keymap() {
   val="$(setxkbmap -query | awk '/^layout/ { print $2 $3 }' | sed s/i//g)"
+  val2="$(setxkbmap -query | awk '/^variant/ { print $2 $3 }' | sed s/i//g)"
   printf "^c$black^ ^b$white^ "
-  printf "^c$white^ ^b$grey^ $val ^b$black^"
+  printf "^c$white^ ^b$grey^ $val $val2 ^b$black^"
 }
   
 battery() {
