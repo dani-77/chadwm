@@ -27,6 +27,12 @@ pkg_updates() {
   fi
 }
 
+weather() {
+  val="$(curl wttr.in/?format=1 | awk '{ print $2 }')"
+  printf "^c$black^ ^b$white^ "
+  printf "^c$white^ ^b$grey^ $val $val2 ^b$black^"
+} 
+
 keymap() {
   val="$(setxkbmap -query | awk '/^layout/ { print $2 $3 }' | sed s/i//g)"
   printf "^c$black^ ^b$white^ "
@@ -67,5 +73,5 @@ while true; do
   [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ] && updates=$(pkg_updates)
   interval=$((interval + 1))
 
-  sleep 1 && xsetroot -name "$updates $(keymap) $(cpu) $(battery) $(mem) $(wlan) $(clock)"
+  sleep 1 && xsetroot -name "$updates $(weather) $(keymap) $(cpu) $(battery) $(mem) $(wlan) $(clock)"
 done
