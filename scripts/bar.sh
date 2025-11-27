@@ -27,8 +27,14 @@ pkg_updates() {
   fi
 }
 
+keymap() {
+  val="$(setxkbmap -query | awk '/^layout/ { print $2 $3 }' | sed s/i//g)"
+  printf "^c$black^ ^b$white^ "
+  printf "^c$white^ ^b$grey^ $val ^b$black^"
+}
+  
 battery() {
-  val="$(cat /sys/class/power_supply/BAT0/capacity)"
+  val="$(cat /sys/class/power_supply/BAT1/capacity)"
   printf "^c$black^ ^b$red^ "
   printf "^c$white^ ^b$grey^ $val ^b$black^"
 
@@ -61,5 +67,5 @@ while true; do
   [ $interval = 0 ] || [ $(($interval % 3600)) = 0 ] && updates=$(pkg_updates)
   interval=$((interval + 1))
 
-  sleep 1 && xsetroot -name "$updates $(cpu) $(battery) $(mem) $(wlan) $(clock)"
+  sleep 1 && xsetroot -name "$updates $(keymap) $(cpu) $(battery) $(mem) $(wlan) $(clock)"
 done
