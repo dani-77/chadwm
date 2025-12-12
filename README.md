@@ -20,7 +20,7 @@ alias chadwm='startx /opt/chadwm/scripts/run.sh'
 
 ## With Display Manager
 
-Already created a chadwm.desktop that will be autmatically installed in /usr/share/xsessions
+Already created a chadwm.desktop that will be automatically installed in /usr/share/xsessions
 
 - [wallpaper](https://github.com/dani-77/chadwm/blob/main/chad.png)
 
